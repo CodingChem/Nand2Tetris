@@ -1,6 +1,6 @@
 namespace VMTranslator.Library.Commands;
 
-public static class CommandFactory
+internal static class CommandFactory
 {
     ///TODO: Implement this.
     public static ICommand GetCommand(string line)

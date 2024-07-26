@@ -4,7 +4,7 @@ namespace VMTranslator.Library.Components;
 ///<summary>
 ///The IParser retrieves ICommand objects.
 ///</summary>
-public interface IParser
+internal interface IParser
 {
   /// <summary>
   /// Get the ICommands.

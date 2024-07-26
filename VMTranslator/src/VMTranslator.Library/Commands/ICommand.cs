@@ -2,7 +2,7 @@ namespace VMTranslator.Library.Commands;
 /// <summary>
 /// The ICommand represents a VM command.
 /// </summary>
-public interface ICommand
+internal interface ICommand
 {
     /// <summary>
     /// produces lines of assembly code to represent the vm command.

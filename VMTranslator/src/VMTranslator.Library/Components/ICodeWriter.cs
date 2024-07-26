@@ -4,7 +4,7 @@ namespace VMTranslator.Library.Components;
 /// <summary>
 /// A ICodeWriter translates <c>ICommand</c> to hack assembly.
 /// </summary>
-public interface ICodeWriter
+internal interface ICodeWriter
 {
   /// <summary>
   /// Adds the ICommand to the assembly.
