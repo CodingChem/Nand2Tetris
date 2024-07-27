@@ -5,7 +5,7 @@ namespace VMTranslator.Library.Components;
 /// <summary>
 /// Translates HACK VM commands to symbolic assembly code.
 /// </summary>
-public class CodeWriter : ICodeWriter
+internal class CodeWriter : ICodeWriter
 {
     private List<string> _asmOutput = new();
     /// <summary>

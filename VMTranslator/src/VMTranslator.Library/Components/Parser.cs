@@ -4,7 +4,7 @@ namespace VMTranslator.Library.Components;
 ///<Summary>
 ///The Parser parses VM Code to ICommand objects.
 ///</Summary>
-public class Parser : IParser
+internal class Parser : IParser
 {
     private readonly List<ICommand> _commands = new List<ICommand>();
     ///<Summary>
