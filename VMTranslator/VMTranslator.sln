@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4518FD0F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VMTranslator.Library.Tests", "tests\VMTranslator.Library.Tests\VMTranslator.Library.Tests.csproj", "{1744A2C8-FDF3-48F2-9BB6-3C2DD1489CC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VMTranslator.ConsoleApp.Tests", "tests\VMTranslator.ConsoleApp.Tests\VMTranslator.ConsoleApp.Tests.csproj", "{278A5548-BE1B-4F75-BDCE-4AFB7B7C9EF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VMTranslator.ConsoleApp.Tests", "tests\VMTranslator.ConsoleApp.Tests\VMTranslator.ConsoleApp.Tests.csproj", "{278A5548-BE1B-4F75-BDCE-4AFB7B7C9EF5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +45,7 @@ Global
 		{88FFB3E0-094A-42F3-AFFB-F52B9BD84982} = {BF6AAE35-9B20-4839-91EA-6C0CDA5B760B}
 		{CF78401B-B53C-45F5-ACC3-EE09C9698ECD} = {BF6AAE35-9B20-4839-91EA-6C0CDA5B760B}
 		{1744A2C8-FDF3-48F2-9BB6-3C2DD1489CC8} = {4518FD0F-37E7-4E5E-A2DF-E86B529D2FAC}
+		{278A5548-BE1B-4F75-BDCE-4AFB7B7C9EF5} = {4518FD0F-37E7-4E5E-A2DF-E86B529D2FAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F595E265-BC5D-47EE-B9FA-ED7E38CA3B18}
