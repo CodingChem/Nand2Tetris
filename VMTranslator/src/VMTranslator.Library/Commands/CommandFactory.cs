@@ -14,6 +14,9 @@ internal static class CommandFactory
     /// <returns>
     /// A ICommand according to the VM command provided.
     /// </returns>
+    /// <exception cref="ArgumentException">
+    /// </exception>
+    /// <exception cref="ArgumentOutOfRangeException" />
     public static ICommand GetCommand(string line)
     {
         switch (line.Split(' ')) {
