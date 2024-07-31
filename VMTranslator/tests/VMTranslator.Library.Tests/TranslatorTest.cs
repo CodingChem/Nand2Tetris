@@ -4,6 +4,21 @@ namespace VMTranslator.Library.Tests;
 public class TranslatorTests
 {
     [TestMethod]
+    public void Translator_ProducesCorrectSubCommandInstructions()
+    {
+        string[] inputVMCommand = ["sub"];
+        string[] expectedOutput = ["//sub", "@SP", "M=M-1", "A=M", "D=M", "@SP", "A=M-1", "M=D-M"];
+
+        string[] actualOutput = Translator.Translate(inputVMCommand);
+
+        Assert.AreEqual(expectedOutput.Length, actualOutput.Length);
+        for (int i = 0; i < actualOutput.Length; i++)
+        {
+            Assert.AreEqual(expectedOutput[i], actualOutput[i]);
+        }
+    }
+
+    [TestMethod]
     public void Translator_ProducesCorrectAddCommandInstructions()
     {
         string[] inputVMCommand = ["add"];
