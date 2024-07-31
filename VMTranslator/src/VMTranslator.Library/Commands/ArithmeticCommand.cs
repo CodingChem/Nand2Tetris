@@ -1,4 +1,5 @@
 namespace VMTranslator.Library.Commands;
+
 /// <summary>
 /// A base class for arithmetic operations.
 /// </summary>
@@ -14,17 +15,19 @@ internal abstract class ArithmeticCommand : ICommand
     /// </returns>
     public string[] ToAssembly()
     {
-        return [
-          InstructionComment(),
-          "@SP",
-          "M=M-1",
-          "A=M", // Going to the first item on the stack.
-          "D=M",
-          "@SP",
-          "A=M-1", // Going to the second argument.
-          ArithmeticInstruction()
+        return
+        [
+            InstructionComment(),
+            "@SP",
+            "M=M-1",
+            "A=M", // Going to the first item on the stack.
+            "D=M",
+            "@SP",
+            "A=M-1", // Going to the second argument.
+            ArithmeticInstruction()
         ];
     }
+
     public abstract string ArithmeticInstruction();
     public abstract string InstructionComment();
 }
