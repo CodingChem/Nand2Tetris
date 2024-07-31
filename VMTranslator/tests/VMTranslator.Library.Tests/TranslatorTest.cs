@@ -4,7 +4,7 @@ namespace VMTranslator.Library.Tests;
 public class TranslatorTests
 {
     [TestMethod]
-    public void Translator_ProducesCorrectPushCommandInstructions()
+    public void Translator_ProducesCorrectAddCommandInstructions()
     {
         string[] inputVMCommand = ["add"];
         string[] expectedOutput = ["//add", "@SP", "M=M-1", "A=M", "D=M", "@SP", "A=M-1", "M=D+M"];
