@@ -43,6 +43,10 @@ internal static class CommandFactory
                 return new NegCommand();
             case ["not"]:
                 return new NotCommand();
+            case ["and"]:
+                return new AndCommand();
+            case ["or"]:
+                return new OrCommand();
             default:
                 throw new ArgumentException($"Invalid instruction: {line}");
         }
