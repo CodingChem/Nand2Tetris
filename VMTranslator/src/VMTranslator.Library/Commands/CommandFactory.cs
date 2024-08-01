@@ -47,6 +47,12 @@ internal static class CommandFactory
                 return new AndCommand();
             case ["or"]:
                 return new OrCommand();
+            case ["eq"]:
+                return new EqCommand();
+            case ["lt"]:
+                return new LtCommand();
+            case ["gt"]:
+                return new GtCommand();
             default:
                 throw new ArgumentException($"Invalid instruction: {line}");
         }
