@@ -19,19 +19,42 @@ internal static class CommandFactory
     /// <exception cref="ArgumentOutOfRangeException" />
     public static ICommand GetCommand(string line)
     {
-        switch (line.Split(' ')) {
-          case ["push", "constant", string x]:
-            return int.TryParse(x, out int number) switch 
-            {
-                false => throw new ArgumentException($"argument x: {x}, could not be parsed."),
-                true => number switch 
+        switch (line.Split(' '))
+        {
+            case ["push", "constant", string x]:
+                return int.TryParse(x, out int number) switch
                 {
-                    <= 32767 and >= 0 => new PushConstantCommand(number),
-                    _ => throw new ArgumentOutOfRangeException($"number must be between 0 and 32767. Actual value: {number}")
-                }
-            };
-          default:
-              throw new ArgumentException($"Invalid instruction: {line}");
+                    false => throw new ArgumentException($"argument x: {x}, could not be parsed."),
+                    true
+                        => number switch
+                        {
+                            <= 32767 and >= 0 => new PushConstantCommand(number),
+                            _
+                                => throw new ArgumentOutOfRangeException(
+                                    $"number must be between 0 and 32767. Actual value: {number}"
+                                )
+                        }
+                };
+            case ["add"]:
+                return new AddCommand();
+            case ["sub"]:
+                return new SubCommand();
+            case ["neg"]:
+                return new NegCommand();
+            case ["not"]:
+                return new NotCommand();
+            case ["and"]:
+                return new AndCommand();
+            case ["or"]:
+                return new OrCommand();
+            case ["eq"]:
+                return new EqCommand();
+            case ["lt"]:
+                return new LtCommand();
+            case ["gt"]:
+                return new GtCommand();
+            default:
+                throw new ArgumentException($"Invalid instruction: {line}");
         }
     }
 }
